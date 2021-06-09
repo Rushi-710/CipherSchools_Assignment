@@ -5,14 +5,14 @@ using namespace std;
 int main() {
     //Taking input from the user
     int num, temp, rem, sum = 0;
-    cout << "Input : ";
+    cout << "Enter a four digit number : ";
     cin >> num;
     temp = num;
 
     //Check whether the number is an Amstrong number
     while(temp != 0) {
         rem = temp % 10;
-        sum += pow(rem, rem);
+        sum += (rem * rem * rem * rem);
         temp = temp / 10;
     }
     //Number is an Armstrong number
@@ -21,7 +21,7 @@ int main() {
         cout << num << " " << "is an Armstrong number." << endl;
     }
     //Number is not an Armstrong number
-    else(sum != num); {
+    else {
         cout << "Output : No" << endl;
         cout << num << " is not an Amstrong number." << endl;
     }
