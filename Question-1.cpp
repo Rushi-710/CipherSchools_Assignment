@@ -4,15 +4,17 @@ using namespace std;
 
 int main() {
     //Taking input from the user
-    int num, temp, rem, sum = 0;
-    cout << "Enter a four digit number : ";
+    int n, num, temp, rem, sum = 0;
+    cout << "Enter the order of the number : ";
+    cin >> n;
+    cout << "Enter the number : ";
     cin >> num;
     temp = num;
 
     //Check whether the number is an Amstrong number
     while(temp != 0) {
         rem = temp % 10;
-        sum += (rem * rem * rem * rem);
+        sum = sum + pow(rem, n);
         temp = temp / 10;
     }
     //Number is an Armstrong number
